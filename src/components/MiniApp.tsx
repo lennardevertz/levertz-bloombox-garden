@@ -1,17 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import FileUploadCard from "~/components/FileUploadCard";
+import FileUploadCard from "./FileUploadCard";
 import {
   Card,
   CardHeader,
   CardTitle,
   CardDescription,
   CardContent,
-} from "~/components/ui/card";
+} from "./ui/card";
 import { DaimoPayButton } from "@daimo/pay";
-import { Label } from "~/components/ui/label";
-import { useFrameSDK } from "~/hooks/useFrameSDK";
+import { Label } from "./ui/label";
+import { useFrameSDK } from "../hooks/useFrameSDK";
+import Header from "./Header";
 import { baseUSDC } from "@daimo/contract";
 import { getAddress } from "viem";
 import BucketExplorer from "./BucketExplorer";
@@ -83,11 +84,14 @@ export default function MiniApp() {
   }
 
   return (
-    <div className="w-[400px] mx-auto py-2 px-2 space-y-4">
-      <ExampleCard />
-      <PaymentComponent />
-      <FileUploadCard />
-      <BucketExplorer />
-    </div>
+    <>
+      <Header />
+      <div className="w-[400px] mx-auto py-2 px-2 space-y-4">
+        <ExampleCard />
+        <PaymentComponent />
+        <FileUploadCard />
+        <BucketExplorer />
+      </div>
+    </>
   );
 }
