@@ -1,7 +1,7 @@
 import { Chain, createConfig, http, injected, WagmiProvider } from "wagmi";
 
 const baseSepolia: Chain = {
-  id: 84531,
+  id: 84532,
   name: "Base Sepolia",
   network: "base-sepolia",
   nativeCurrency: { name: "Sepolia Ether", symbol: "ETH", decimals: 18 },
